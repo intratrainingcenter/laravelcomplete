@@ -4,7 +4,7 @@ namespace App;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Model;
 
-class datapelanggan extends Model
+class riwayattransaksi extends Model
 {
     use SoftDeletes;
     protected $fillable = ['nama', 'id'];
@@ -20,8 +20,4 @@ class datapelanggan extends Model
     public $rules = [
         'nama' => 'required'
     ];
-    public function riwayat()
-    {
-        return $this->hasMany('App\riwayattransaksi');
-    }
 }

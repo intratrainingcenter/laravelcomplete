@@ -58,6 +58,11 @@
             <i class="fa fa-th"></i> <span>Data Pelanggan</span>
           </a>
         </li>
+        <li class="{{ Request::is('riwayattransaksi*') ? 'active' : '' }}">
+          <a href="riwayattransaksi">
+            <i class="fa fa-th"></i> <span>Riwayat Transaksi</span>
+          </a>
+        </li>
       </ul>
     </section>
     <!-- /.sidebar -->

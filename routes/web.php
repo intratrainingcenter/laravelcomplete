@@ -15,3 +15,4 @@ Route::get('/', function () {
     return view('admin.pages.dashboard.index');
 });
 Route::resource('datapelanggan','datapelangganController');
+Route::resource('riwayattransaksi','riwayattransaksiController');
