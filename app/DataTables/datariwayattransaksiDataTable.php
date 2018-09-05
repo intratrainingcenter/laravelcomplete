@@ -1,10 +1,11 @@
 <?php
 
 namespace App\DataTables;
-
+use Illuminate\Support\Facades\DB;
 use App\riwayattransaksi;
 use Yajra\DataTables\Services\DataTable;
 
+use Illuminate\Support\Facades\Cache;
 class datariwayattransaksiDataTable extends DataTable
 {
     /**
@@ -27,8 +28,11 @@ class datariwayattransaksiDataTable extends DataTable
      */
     public function query(riwayattransaksi $model)
     {
-        return $model->newQuery()->join('datapelanggans', 'riwayattransaksis.datapelanggan_id', '=', 'datapelanggans.id')
-        ->select('riwayattransaksis.*','datapelanggans.nama');
+            return DB::table('riwayattransaksis')
+            ->join('datapelanggans', 'riwayattransaksis.datapelanggan_id', '=', 'datapelanggans.id')
+            ->select('riwayattransaksis.*','datapelanggans.nama');
+    
+       
     }
 
     /**

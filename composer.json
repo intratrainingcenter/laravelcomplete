@@ -13,6 +13,7 @@
         "laravel/tinker": "^1.0",
         "laravelcollective/html": "^5.4.0",
         "paypal/rest-api-sdk-php": "^1.13",
+        "predis/predis": "^1.1",
         "yajra/laravel-datatables-buttons": "~3.2",
         "yajra/laravel-datatables-oracle": "~8.0"
     },

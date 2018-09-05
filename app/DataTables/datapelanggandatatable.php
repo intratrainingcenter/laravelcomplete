@@ -1,10 +1,10 @@
 <?php
 
 namespace App\DataTables;
-
+use Illuminate\Support\Facades\DB;
 use App\datapelanggan;
 use Yajra\DataTables\Services\DataTable;
-
+use Illuminate\Support\Facades\Cache;
 class datapelanggandatatable extends DataTable
 {
     /**
@@ -27,7 +27,7 @@ class datapelanggandatatable extends DataTable
      */
     public function query(datapelanggan $model)
     {
-        return $model->newQuery()->select('id', 'nama', 'created_at', 'updated_at');
+        return DB::select("call getdatapelanggan()");
     }
 
     /**
